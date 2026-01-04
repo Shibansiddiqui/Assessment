@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-multipart
+
+torch
+transformers
+accelerate
+sentencepiece
+
+pdfplumber
+pymupdf
+pytesseract
+pillow
+
+pandas
+openpyxl

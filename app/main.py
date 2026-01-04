@@ -7,9 +7,7 @@ import pandas as pd
 from app.classifier import classify_document
 from app.extractor import extract_invoice_data, extract_bol_data
 from app.validator import validate_invoice_data
-from app.transformer import export_to_excel, submit_to_customs  # transformer handles Excel & API
-
-# Create upload directory
+from app.transformer import export_to_excel, submit_to_customs
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
@@ -41,7 +39,7 @@ async def upload_files(files: list[UploadFile] = File(...)):
         else:
             results.append({"filename": file.filename, "type": doc_type, "data": None})
 
-    # Export all validated documents to Excel
+
     export_to_excel(results, filename="validated_documents.xlsx")
 
     return results

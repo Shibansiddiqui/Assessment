@@ -59,7 +59,7 @@ def export_to_excel(all_documents, filename="validated_documents.xlsx"):
             }
             bol_rows.append(row)
 
-    # Only write Excel if there is data
+
     if not invoice_rows and not bol_rows:
         print("No data to export to Excel")
         return

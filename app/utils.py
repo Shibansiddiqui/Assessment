@@ -10,7 +10,7 @@ def extract_text_or_ocr(pdf_path, ocr_func):
                 text += page_text
 
     if len(text.strip()) < 50:
-        # Probably scanned PDF
+
         return ocr_func(pdf_path)
 
     return text
